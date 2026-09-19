@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
+import { Analytics } from "@vercel/analytics/next";
 import { RevealInit, RevealScript } from "@/components/layout/reveal-script";
 import { SvgFilters } from "@/components/layout/svg-filters";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -79,6 +80,7 @@ export default function RootLayout({
         {/* Flips `.reveal` elements into view. Must be present: without it
             every revealed section stays at opacity 0. */}
         <RevealScript />
+        <Analytics />
       </body>
     </html>
   );
